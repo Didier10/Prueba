@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+ 
+        final int XMAX = 10000;
+		final int RANGE_SIZE = 101;
+
+		Scanner sc = new Scanner(System.in);
+		int list1Size = sc.nextInt();
+		int xMin = XMAX + 1;
+		int[] list = new int[RANGE_SIZE];
+		
+		int[] list1 = new int[list1Size];
+		
+		for (int i = 0; i < list1Size; i++) {
+			list1[i] = sc.nextInt();
+		}
+		int list2Size = sc.nextInt();
+		int[] list2 = new int[list2Size];
+		for (int i = 0; i < list2Size; i++) {
+			int num = sc.nextInt();
+			if (num < xMin) {
+				xMin = num;
+			}
+			list2[i] = num;
+		}
+		for (int i = 0; i < list2Size; i++) {
+
+			list[list2[i] - xMin]++;
+		}
+		for (int i = 0; i < list1Size; i++) {
+			list[list1[i] - xMin]--;
+		}
+		for (int i = 0; i < RANGE_SIZE; i++) {
+			if (list[i] > 0) {
+				System.out.print((i + xMin) + " ");
+			}
+		}
+	}
+}
