@@ -8,28 +8,28 @@ public class CompareLists
 {
     public static void Main()
     {
-	     // Crear lista.
-		List<int> listaA = new List<int>();
-		List<int> listaB = new List<int>();
+	 // Crear lista.
+	List<int> listaA = new List<int>();
+	List<int> listaB = new List<int>();
 		
-		// Ingreso de elementos.
+	// Ingreso de elementos.
         list.Add(10);
         list.Add(13);
         list.Add(203); 
-        list.Add(204); // num 1
-		list.Add(205); // num 2
-		list.Add(206); // num 3
-		list.Add(207);
-		list.Add(208);
+        list.Add(204); 
+	list.Add(205); 
+	list.Add(206); 
+	list.Add(207);
+	list.Add(208);
          
-		 // comparar lista 
-		 var result = listaA.Union(listaB).Except(listaA.Intersect(listaB)).ToList();
+        // comparar lista 
+	var result = listaA.Union(listaB).Except(listaA.Intersect(listaB)).ToList();
 		 
 		 
-        // organizar lista y Obtenga los num 1,2,3   
-		list = list.OrderByDescending(x => x.AVC) .ToList();
+        // organizar lista   
+	list = list.OrderByDescending(x => x.AVC) .ToList();
 		
-		 foreach (var c in query_orderbypicklist)
+	foreach (var c in query_orderbypicklist)
     {
          System.Console.WriteLine(.........);
     }
@@ -38,7 +38,6 @@ public class CompareLists
     }
 __________
 Output
-
-204 
-205 
-206
+..
+...
+...
